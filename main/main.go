@@ -14,7 +14,7 @@ func enableCors(w *http.ResponseWriter) {
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/", loadHandler()).Methods("GET") //.BuildOnly().Host("petrolistan.com");
+	r.HandleFunc("/allPrices", loadHandler()).Methods("GET") //.BuildOnly().Host("petrolistan.com");
 
 	http.ListenAndServe(":80", r)
 }
