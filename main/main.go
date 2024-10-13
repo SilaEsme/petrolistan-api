@@ -16,7 +16,7 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/allPrices", loadHandler()).Methods("GET") //.BuildOnly().Host("petrolistan.com");
 
-	http.ListenAndServe(":80", r)
+	http.ListenAndServe(":8080", r)
 }
 
 func loadHandler() http.HandlerFunc {
