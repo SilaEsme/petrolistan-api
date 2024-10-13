@@ -22,7 +22,7 @@ import (
 // 	return list
 // }
 
-func opetToData(opetResponse opet.OpetDto) []DataModel2{
+func OpetToData(opetResponse opet.OpetDto) []DataModel2{
 
 	var list []DataModel2
 	for _ ,v := range opetResponse {

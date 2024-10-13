@@ -2,7 +2,6 @@ package main
 
 import (
 	"net/http"
-
 	"github.com/gorilla/mux"
 	"petrolistan.com/opet"
 	u "petrolistan.com/utils"
@@ -25,9 +24,9 @@ func loadHandler() http.HandlerFunc {
 		var response []DataModel2
 		// Get Opet Api
 		opetResponse := opet.LoadOpetHandler(w)
-		response = append(response, opetToData(opetResponse)...)
+		response = append(response, OpetToData(opetResponse)...)
 
-		resp := u.Message(true, "başarılı")
+		resp := u.Message(true, "Success")
 		resp["data"] = response
 		u.Respond(w, resp)
 		// Get PO Api
